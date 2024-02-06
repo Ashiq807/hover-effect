@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hoverSlider</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="slide-wrapper">
+        <img src="photos/Residential.jpg" alt="photo" class="image">
+    </div>
+    <div class="slide-wrapper">
+        <img src="photos/Turnkey-projects.jpg" alt="photo" class="image">
+    </div>
+
+
+    <script>
+        document.querySelectorAll(".slide-wrapper").forEach(slide => {
+            var correspondingImage = slide.querySelector(".image");
+
+            slide.addEventListener("mouseover", () => {
+                correspondingImage.style.width = "100%";
+            })
+
+            slide.addEventListener("mouseout", () => {
+                correspondingImage.style.width = "";
+            })
+        });
+    </script>
+</body>
+</html>
